@@ -50,3 +50,9 @@ The encoder works as follows:
 
 * Extract state : the decoder extracts the 128 bits of data from the shift register and stores them in the dout register. The sig_out signal is set to indicate that the output data is valid, and the decoder transitions back to the idle state.
 
+### Position of parity bits:
+![Screenshot (419)](https://github.com/Pavanpm199/ADLD_01fe20bec199/assets/84024750/baea7e53-f643-441f-811e-fb76fee4d9a4)
+
+## Results : 
+![Screenshot (397)](https://github.com/Pavanpm199/ADLD_01fe20bec199/assets/84024750/c6d1af66-311f-4528-9d00-f31f2be1130d)
+
