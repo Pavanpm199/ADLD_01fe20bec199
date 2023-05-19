@@ -1,7 +1,14 @@
 ### <h3> **Problem Statement: Single Bit Error Correction and Detection using Hamming Code** 
 
 <br/> 
-Hamming Code: Hamming code is a linear error-correcting code named after its inventor, Richard Hamming. Hamming codes can detect up to two simultaneous bit errors, and correct single bit error.
+Hamming Code: Hamming code is an error-detection method that
+can detect some errors, but it is only capable of
+single error correction . This error detection
+method is suitable for use in situations where there
+is few randomized mistake. Method Hamming
+Code inserts (n + 1) check bits into 2n data bits.
+This method uses XOR (Exclusive - OR) in the
+error detection process
 
 ## Architecture
 ![architecture](https://github.com/Pavanpm199/ADLD_01fe20bec199/assets/84024750/4a53bb7c-d7be-47f5-a41d-eb820692399b)
