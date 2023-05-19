@@ -28,3 +28,25 @@ The encoder works as follows:
 * If not equal  to zero then ,it flips that bit to either from 0 to 1 or from 1 to 0 depending on the value of parity in that location.
 
 * After flipping the bit,in the  data extraction stage original data and parity bits are separated and original data is transmitted to output port.
+
+## Finite State Machine:
+
+# Encoder FSM:
+![encoderfsm](https://github.com/Pavanpm199/ADLD_01fe20bec199/assets/84024750/6cdf0a85-0886-493b-8a6f-337779c9964a)
+* Idle:The initial state, where the encoder waits for the start signal.
+* Check bits: The state where the encoder checks the input data for parity errors.
+* Add check bits: The state where the encoder adds the necessary parity bits to the input data.
+* Serial out: The state where the encoder generates the output data and outputs it.
+
+# Decoder FSM:
+![decoderfsm](https://github.com/Pavanpm199/ADLD_01fe20bec199/assets/84024750/5ef3a8df-2c77-494b-8019-d0c6b194e2bb)
+* Idle :the decoder is waiting for the start signal to be asserted. When start is asserted, the decoder transitions to the receive state.
+
+* Receive state : the decoder receives the input data one bit at a time and stores it in the shift register. The decoder counter register is used to keep track of the number of bits received. When all 136 bits have been received, the decoder transitions to the xor_opn state.
+
+* Xor_operattion : the decoder calculates the parity bits using a series of XOR operations on the bits stored in the shift register. The calculated parity bits are stored in the parity register, and the decoder transitions to the error_flip state.
+
+ * Error_flip : the decoder compares the calculated parity bits with the parity bits stored in the shift register. If there is a mismatch, the error signal is set and the decoder transitions to the extract state. Otherwise, the decoder transitions directly to the extract state.
+
+* Extract state : the decoder extracts the 128 bits of data from the shift register and stores them in the dout register. The sig_out signal is set to indicate that the output data is valid, and the decoder transitions back to the idle state.
+
