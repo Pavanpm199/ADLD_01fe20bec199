@@ -1,4 +1,4 @@
-#### **Problem Statement: Single Bit Error Correction and Detection using Hamming Code** 
+# **Problem Statement: Single Bit Error Correction and Detection using Hamming Code** 
 
 <br/> 
 Hamming Code: Hamming code is an error-detection method that
@@ -13,13 +13,13 @@ error detection process
 ## Architecture
 ![architecture](https://github.com/Pavanpm199/ADLD_01fe20bec199/assets/84024750/4a53bb7c-d7be-47f5-a41d-eb820692399b)
 
-# Encoder
+## Encoder
 The encoder takes a 128-bit input data and generates a 136-bit output data with 8 parity bits.
 The encoder works as follows:
 * The input data is first checked for parity.If any of the 8 parity bits is incorrect,the encoder will add the necessary parity bits to make the data correct.
 * After the input data has been verified to have correct parity,the encoder will add 8 parity bits to the data to generate the output data.
 
-# Decoder:
+## Decoder:
 
 * The decoder receives  a serial input of data and calculates parity bits .
 
@@ -31,14 +31,14 @@ The encoder works as follows:
 
 ## Finite State Machine:
 
-# Encoder FSM:
+### Encoder FSM:
 ![encoderfsm](https://github.com/Pavanpm199/ADLD_01fe20bec199/assets/84024750/6cdf0a85-0886-493b-8a6f-337779c9964a)
 * Idle:The initial state, where the encoder waits for the start signal.
 * Check bits: The state where the encoder checks the input data for parity errors.
 * Add check bits: The state where the encoder adds the necessary parity bits to the input data.
 * Serial out: The state where the encoder generates the output data and outputs it.
 
-# Decoder FSM:
+### Decoder FSM:
 ![decoderfsm](https://github.com/Pavanpm199/ADLD_01fe20bec199/assets/84024750/5ef3a8df-2c77-494b-8019-d0c6b194e2bb)
 * Idle :the decoder is waiting for the start signal to be asserted. When start is asserted, the decoder transitions to the receive state.
 
