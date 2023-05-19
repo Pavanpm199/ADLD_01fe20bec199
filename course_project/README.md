@@ -1,4 +1,4 @@
-### <h3> **Problem Statement: Single Bit Error Correction and Detection using Hamming Code** 
+#### **Problem Statement: Single Bit Error Correction and Detection using Hamming Code** 
 
 <br/> 
 Hamming Code: Hamming code is an error-detection method that
